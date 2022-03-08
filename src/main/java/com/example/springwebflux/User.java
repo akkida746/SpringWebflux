@@ -1,2 +1,12 @@
-package com.example.springwebflux;public class User {
+package com.example.springwebflux;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class User {
+    int id;
 }
