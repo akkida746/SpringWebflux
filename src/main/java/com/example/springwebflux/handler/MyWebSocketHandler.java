@@ -30,6 +30,9 @@ public class MyWebSocketHandler extends TextWebSocketHandler {
 
     @Override
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+        System.out.println("Msg: " + message);
+        System.out.println(session.getId());
+        System.out.println(session.getLocalAddress().getAddress());
         super.handleTextMessage(session, message);
         sessions.forEach(webSocketSession -> {
             try {

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class WebSocketController {
 
     @GetMapping("/websocket")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+    public String showUserList(Model model) {
         model.addAttribute("name");
         return "ws-broadcast";
     }
